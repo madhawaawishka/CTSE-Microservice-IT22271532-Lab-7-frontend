@@ -26,6 +26,7 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_ASHY_PLANT_038803500 }}
           repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
           action: "upload"
+          skip_deploy_on_missing_secrets: true
           ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
           app_location: "/" # App source code path
@@ -33,7 +34,7 @@ jobs:
           output_location: "out" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
         env:
-          NEXT_PUBLIC_API_URL: https://gateway.proudbush-b4fa9af7.southeastasia.azurecontainerapps.io
+          NEXT_PUBLIC_API_URL: https://gateway.bravewater-2d676d5c.southeastasia.azurecontainerapps.io
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
