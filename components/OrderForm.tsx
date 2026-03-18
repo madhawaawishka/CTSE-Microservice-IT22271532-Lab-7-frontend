@@ -2,7 +2,8 @@
 
 import { useState } from 'react'
 import type { OrderEntry } from '@/app/page'
-import { getApiUrl } from '@/app/config'
+
+const API_URL = 'https://gateway.bravewater-2d676d5c.southeastasia.azurecontainerapps.io';
 
 const SAMPLE_ORDERS = [
   '{"productId":"PROD-001","quantity":2,"customerId":"CUST-123","price":49.99}',
@@ -16,7 +17,6 @@ export default function OrderForm({ onOrderPlaced }: Props) {
   const [payload, setPayload] = useState(SAMPLE_ORDERS[0])
   const [loading, setLoading] = useState(false)
   const [last, setLast] = useState<OrderEntry | null>(null)
-  const API_URL = getApiUrl()
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
