@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import type { OrderEntry } from '@/app/page'
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://gateway.proudbush-b4fa9af7.southeastasia.azurecontainerapps.io'
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://gateway.bravewater-2d676d5c.southeastasia.azurecontainerapps.io'
 
 const SAMPLE_ORDERS = [
   '{"productId":"PROD-001","quantity":2,"customerId":"CUST-123","price":49.99}',
